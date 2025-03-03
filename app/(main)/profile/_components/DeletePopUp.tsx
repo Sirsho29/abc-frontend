@@ -50,7 +50,7 @@ const DeletePopUp = ({
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent showCross={false} className="w-[490px] max-w-[90vw] rounded-lg backdrop-blur-lg border-none sm:rounded-[12px]">
+      <DialogContent className="w-[490px] max-w-[90vw] rounded-lg backdrop-blur-lg border-none sm:rounded-[12px]">
         <DialogHeader>
           <DialogTitle className="hidden"></DialogTitle>
           <DialogDescription className="hidden"></DialogDescription>
