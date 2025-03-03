@@ -64,30 +64,42 @@ const LeaderboardTable = () => {
       </div>
       <Image src={ALine} alt="" className="h-[150px] w-[2px]" />
       <div className="flex w-full flex-col gap-2">
-        <div className="flex justify-between items-center">
-          <h1 className="text-lg font-[500] ">
+        <div className="flex justify-between items-center mb-3 mt-3">
+          <h1 className="text-[30px] leading-[30px] font-[700]  ">
             {" "}
             Your Position: <span className="text-[#527dff]">36</span>
           </h1>
-          <h1 className="text-lg font-[500] ">
+          <h1 className="text-[30px] leading-[30px] font-[700]">
             {" "}
             Your Score: <span className="text-[#527dff]">72</span>
           </h1>
         </div>
-        <div className="p-4 text-[#374051] flex justify-between px-[90px] flex-row gap-1 rounded-xl shadow-sm border bg-[#F0F8FF]">
+        <div className="p-4 text-[#374051] flex justify-between px-[50px] flex-row gap-1 rounded-xl shadow-sm border bg-[#F0F8FF]">
           <div className="flex justify-center items-center flex-col tracking-wide">
-            <h1 className="font-[600] text-lg">Accuracy</h1>
-            <p className="text-[#527dff] font-[500]">50%</p>
+            <h1 className="text-[24px] leading-[24px] font-[500] text-[#6c7180] mb-1">
+              Accuracy
+            </h1>
+            <p className="text-[21px] leading-[21px] font-[600] text-[#527dff]">
+              50%
+            </p>
           </div>
           <Image src={Line} alt="Line" />
           <div className="flex justify-center items-center flex-col tracking-wide">
-            <h1 className="font-[600] text-lg">Avg. Score</h1>
-            <p className="text-[#527dff] font-[500]">67</p>
+            <h1 className="text-[24px] leading-[24px] font-[500] text-[#6c7180] mb-1">
+              Avg. Score
+            </h1>
+            <p className="text-[21px] leading-[21px] font-[600] text-[#527dff]">
+              67
+            </p>
           </div>
           <Image src={Line} alt="Line" />
           <div className="flex justify-center items-center flex-col tracking-wide">
-            <h1 className="font-[600] text-lg">Completion Rate</h1>
-            <p className="text-[#527dff] font-[500]">73%</p>
+            <h1 className="text-[24px] leading-[24px] font-[500] text-[#6c7180] mb-1">
+              Completion Rate
+            </h1>
+            <p className="text-[21px] leading-[21px] font-[600] text-[#527dff]">
+              73%
+            </p>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ const AccountSettings = () => {
       className="py-4  cursor-pointer px-4 text-[#374051] flex gap-1 rounded-xl shadow-sm border mb-2 justify-between flex-col font-[400]  "
     >
       <div className="flex justify-between">
-        <h1 className="text-lg font-[400] flex justify-center items-center gap-3">
+        <h1 className="text-[24px] leading-[24px] font-[500] flex justify-center items-center gap-3">
           <span>
             <Image src={Avater} alt="Down" height={20} width={20} />
           </span>
@@ -46,12 +46,15 @@ const AccountSettings = () => {
       {drop && (
         <div
           onClick={(e) => e.stopPropagation()}
-          className="px-3 py-1 flex justify-center flex-col items-center tracking-wide  gap-2  rounded-lg "
+          className="px-3 py-1 flex justify-center flex-col items-center tracking-wide  gap-4  rounded-lg "
         >
-          <Link href={'/profile/edit-profile'} className="flex justify-between w-full">
+          <Link
+            href={"/profile/edit-profile"}
+            className="flex justify-between w-full"
+          >
             <h1
-              className="text-sm font-[400]
-             flex justify-center items-center -tracking-tighter gap-[0.8rem]"
+              className="text-[18px] leading-[18px] font-[400]
+             flex justify-center items-center gap-2 mt-2"
             >
               <span>
                 <Image src={Edit} alt="Down" height={15} width={15} />
@@ -61,7 +64,7 @@ const AccountSettings = () => {
             <Image src={Arrow} alt="Down" height={5} width={5} />
           </Link>
           <div className="flex justify-between w-full">
-            <h1 className="text-sm font-[400] -tracking-tighter flex justify-center items-center gap-2">
+            <h1 className="text-[18px] leading-[18px] font-[400] flex justify-center items-center gap-2">
               <span>
                 <Image src={Change} alt="Down" height={15} width={15} />
               </span>
@@ -70,7 +73,7 @@ const AccountSettings = () => {
             <Image src={Arrow} alt="Down" height={5} width={5} />
           </div>
           <div className="flex justify-between w-full">
-            <h1 className="text-sm font-[400] -tracking-tighter flex justify-center items-center gap-2">
+            <h1 className="text-[18px] leading-[18px] font-[400] flex justify-center items-center gap-2">
               <span>
                 <Image src={Saved} alt="Down" height={15} width={15} />
               </span>

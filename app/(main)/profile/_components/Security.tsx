@@ -14,7 +14,7 @@ const Security = () => {
       className="py-4  cursor-pointer px-4 text-[#374051] flex gap-1 rounded-xl shadow-sm border mb-2 justify-between flex-col font-[400] bg-white "
     >
       <div className="flex justify-between">
-        <h1 className="text-lg font-[400] flex justify-center items-center gap-3">
+        <h1 className="text-[24px] leading-[24px] font-[500] flex justify-center items-center gap-3">
           <span>
             <Image src={Sec} alt="Down" height={20} width={20} />
           </span>
@@ -41,15 +41,15 @@ const Security = () => {
         </div>
       </div>
       {drop && (
-        <div className="flex flex-col gap-2">
-          <p className=" font-[400] text-sm tracking-wide  ml-1">
+        <div className="flex flex-col gap-3">
+          <p className=" text-[18px] my-1 leading-[18px] mt-2 font-[400] tracking-wide  ml-1">
             2 Signed Devices
           </p>
           <div
             onClick={(e) => e.stopPropagation()}
             className=" px-3 py-2  flex justify-between items-center  border rounded-lg gap-2"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-[18px] leading-[18px] font-[500]">
               <Image src={Device} alt="Down" height={15} width={15} /> I Phone 6
             </div>
             <Image src={Signout} alt="Sign Out" />
@@ -58,7 +58,7 @@ const Security = () => {
             onClick={(e) => e.stopPropagation()}
             className=" px-3 py-2  flex justify-between items-center  border rounded-lg gap-2"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-[18px] leading-[18px] font-[500]">
               <Image src={Device} alt="Down" height={15} width={15} /> I Phone 6
             </div>
             <Image src={Signout} alt="Sign Out" />

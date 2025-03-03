@@ -13,7 +13,10 @@ export default function PhoneNumberInput() {
       </Label>
       <div className="flex gap-2 mt-1">
         {/* Country Code Selector */}
-        <span className="flex items-center px-3 border border-gray-300 rounded-md bg-gray-100 text-gray-600 text-sm">
+        <span
+          className="flex items-center px-3 border border-gray-300 rounded-md
+         bg-[#F0F8FF] text-gray-600 text-sm"
+        >
           +91
         </span>
         {/* Phone Number Input */}

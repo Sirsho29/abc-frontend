@@ -2,10 +2,14 @@ import React from "react";
 import MainHeader from "@/app/_containers/MainHeader";
 import DropdownMenu from "@/app/(main)/test/_components/DropDownCard";
 import SearchIcon from "@/assets/svg/reviceIcons/searchIcon.svg";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import ArrowIcon from "@/assets/svg/testIcons/sidebar.svg";
+import Image from "next/image";
 
 const page = () => {
   return (
-    <MainHeader name="Revice">
+    <MainHeader name="Flashcards">
       <div>
         <div className=" mb-3 z-10">
           <h1 className="text-[#374051] font-[500] text-lg mb-2">
@@ -22,6 +26,16 @@ const page = () => {
           <DropdownMenu />
           <DropdownMenu />
           <DropdownMenu />
+        </div>
+        <div className="flex justify-center items-center">
+          <Button className="text-center mt-8 w-fit" variant="blue">
+            <Link
+              href={"/test/history"}
+              className="flex justify-center items-center gap-2"
+            >
+              Proceed <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />
+            </Link>
+          </Button>
         </div>
       </div>
     </MainHeader>

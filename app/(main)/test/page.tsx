@@ -2,7 +2,9 @@ import MainHeader from "@/app/_containers/MainHeader";
 import React from "react";
 import DropDownCard from "./_components/DropDownCard";
 import { Button } from "@/components/ui/button";
-
+import ArrowIcon from "@/assets/svg/testIcons/sidebar.svg";
+import Image from "next/image";
+import Link from "next/link";
 const page = () => {
   return (
     <MainHeader name="Test">
@@ -25,7 +27,12 @@ const page = () => {
         </div>
         <div className="flex justify-center items-center">
           <Button className="text-center mt-8 w-fit" variant="blue">
-            Proceed
+            <Link
+              href={"/test/history"}
+              className="flex justify-center items-center gap-2"
+            >
+              Proceed <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />
+            </Link>
           </Button>
         </div>
       </div>

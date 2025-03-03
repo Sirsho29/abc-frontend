@@ -19,7 +19,7 @@ const AnalyticsCard: React.FC<AnalyticsCardProps> = ({ title, value, color, icon
     <div className="bg-white  rounded-2xl p-4 w-[17.5rem]  flex flex-col items-center border justify-between">
       <div className="flex justify-between w-full text-gray-600 text-sm">
         <Image src={icon} alt="Accuracy" width={24} height={24} />
-        <span className="flex items-center gap-1 font-semibold text-base">
+        <span className="flex items-center gap-1 text-[18px] text-[#374051] leading-[20px] font-[600]">
           {title}
         </span>
         <Image src={InfoIcon} alt="Accuracy" width={24} height={24} />
@@ -35,7 +35,7 @@ const AnalyticsCard: React.FC<AnalyticsCardProps> = ({ title, value, color, icon
             path: { stroke: color },
           }}
         />
-        <span className="absolute inset-0 flex items-center justify-center text-base font-semibold">
+        <span className="absolute inset-0 flex items-center justify-center text-[18px] leading-[18px] font-[700]">
           {value}%
         </span>
       </div>

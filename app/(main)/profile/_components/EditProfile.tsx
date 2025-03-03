@@ -13,7 +13,11 @@ const EditProfile = () => {
   return (
     <div className="w-full flex justify-center items-center flex-col">
       <div>
-        <Image src={PFP} alt="pfp" className="h-[8rem] w-[8rem] cursor-pointer" />
+        <Image
+          src={PFP}
+          alt="pfp"
+          className="h-[11.3rem] w-[11.3rem] cursor-pointer"
+        />
       </div>
       <div className="w-full flex justify-center items-center flex-col gap-2">
         <NameInput

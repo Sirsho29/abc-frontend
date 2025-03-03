@@ -15,7 +15,7 @@ const Settings = () => {
       className="py-4  cursor-pointer px-4 text-[#374051] flex gap-1 rounded-xl shadow-sm border mb-2 justify-between flex-col font-[400]  "
     >
       <div className="flex justify-between">
-        <h1 className="text-lg font-[400] flex justify-center items-center gap-3">
+        <h1 className="text-[24px] leading-[24px] font-[500] flex justify-center items-center gap-3">
           <span>
             <Image src={Avater} alt="Down" height={20} width={20} />
           </span>
@@ -46,10 +46,10 @@ const Settings = () => {
           onClick={(e) => e.stopPropagation()}
           className="px-3 py-1 flex justify-center flex-col items-center tracking-wide  gap-2  rounded-lg "
         >
-          <div className="flex justify-between w-full">
+          <div className="flex justify-between w-full mt-2">
             <h1
-              className="text-sm font-[400]
-             flex justify-center items-center -tracking-tighter gap-[0.8rem]"
+              className="text-[18px] leading-[18px] font-[400]
+             flex justify-center items-center -tracking-tighter gap-2"
             >
               <span>
                 <Image src={Bell} alt="Down" height={15} width={15} />
@@ -58,7 +58,6 @@ const Settings = () => {
             </h1>
             <Image src={Arrow} alt="Down" height={5} width={5} />
           </div>
-          
         </div>
       )}
     </div>

@@ -33,24 +33,23 @@ const ReportCard = ({
       className={`${dmSans.variable} bg-[#e1e8ff] text-[#4B5462] shadow-sm rounded-xl p-4 w-[16.5rem] flex justify-center items-center gap-5 z-1`}
     >
       <div className="flex justify-center items-center flex-col text-sm">
-        <h1 className=" font-semibold text-base">{name}</h1>
+        <h1 className=" text-[17px] leading-[18px] font-[600] mb-[9px]">
+          {name}
+        </h1>
         {typed ? (
-          <h1 className="font-bold">
-            <span className=" text-[#234fd3] font-['DM Sans'] text-base">
+          <h1 className="font-bold text-[18px] ">
+            <span className=" text-[#234fd3] font-['DM Sans'] text-[24px]">
               {marks}
             </span>
             /{totalmarks}
           </h1>
         ) : (
-          <h1 className="font-bold text-[#234fd3] text-base">
-            {number}{" "}
-            {min && (
-              <samp className={`text-[#234fd3]`}>min.</samp>
-            )}
+          <h1 className="font-bold text-[#234fd3] text-[24px] leading-[24px] ">
+            {number} {min && <samp className={`text-[#234fd3]`}>min.</samp>}
           </h1>
         )}
       </div>
-      <Image src={icon} alt="Flash Card" height={36} width={36} />
+      <Image src={icon} alt="Flash Card" className="h-[40px] w-[40px]" height={39} width={39} />
     </div>
   );
 };

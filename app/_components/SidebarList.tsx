@@ -35,13 +35,13 @@ const sidebarList: {
     route: "/test",
     icon: TestLogoIcon.src,
     aicon : ATestLogoIcon.src,
-    text: "Test",
+    text: "Tests",
   },
   {
     route: "/flashcard",
     icon: FlashCardIcon.src,
     aicon: AFlashCardIcon.src,
-    text: "FlashCard",
+    text: "Flashcards",
   },
   {
     route: "/revice",

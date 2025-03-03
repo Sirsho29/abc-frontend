@@ -30,11 +30,13 @@ const SecondaryHeader = ({
             <Image src={ReturnIcon} alt="Pattern" height={20} width={20} />
           </Link>
 
-          <h1 className="font-[600] ml-[16px] text-[25px]">{name}</h1>
+          <h1 className="font-[600] ml-[16px] text-[36px] text-[#374051]">
+            {name}
+          </h1>
         </div>
         <div className="flex gap-7">
           <Image
-            className=""
+            className="h-[30px] w-[30px]"
             src={NotificationIcon}
             alt="Pattern"
             height={20}

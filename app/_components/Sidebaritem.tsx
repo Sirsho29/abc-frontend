@@ -21,10 +21,10 @@ const SideBarItem = (props: {
     <Link href={props.route} onClick={props.onClick}>
       <li
         className={cn(
-          " cursor-pointer px-[30px] flex items-center gap-3 text-[14px]",
+          " cursor-pointer px-[30px] flex items-center gap-3 ",
           isHome || isOther
-            ? " text-[#527dff] font-[700]"
-            : " text-[#F4EBF5] font-[700]"
+            ? " text-[#527dff] font-[800] text-[18px]"
+            : " text-[#F4EBF5] font-[600] text-[21px]"
         )}
       >
         <span

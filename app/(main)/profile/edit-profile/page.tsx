@@ -21,9 +21,9 @@ const page = () => {
                 }}
               >
                 <span
-                  className="text-[14] font-[400] font-DMSans"
+                  className="text-[21px] leading-[21px] font-[600] font-DMSans"
                   style={{
-                    color: currentTab === "editprofile" ? "#5249AA" : "#666666",
+                    color: currentTab === "editprofile" ? "#4a71e7" : "#666666",
                   }}
                 >
                   Edit Profile
@@ -44,9 +44,9 @@ const page = () => {
                 }}
               >
                 <span
-                  className="text-[14] font-[400] font-DMSans"
+                  className="text-[21px] leading-[21px] font-[600] font-DMSans"
                   style={{
-                    color: currentTab === "cpassword" ? "#5249AA" : "#666666",
+                    color: currentTab === "cpassword" ? "#4a71e7" : "#666666",
                   }}
                 >
                   Change Password

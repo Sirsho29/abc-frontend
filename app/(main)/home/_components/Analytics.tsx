@@ -14,27 +14,29 @@ const analyticsData = [
     title: "Completion Rate",
     value: 50,
     color: "#ef4444",
-    icon: FlashcardIcon,
+    icon: CompletionIcon,
   },
   {
     title: "Flashcard Review Rate",
     value: 70,
     color: "#527dff",
-    icon: CompletionIcon,
+    icon: FlashcardIcon,
   },
 ];
 
 const Analytics = () => {
   return (
     <div className="mb-3">
-      <div className="flex justify-between ">
-        <h1 className="font-semibold text-lg mb-3">Analytics</h1>
+      <div className="flex justify-between mb-5">
+        <h1 className="text-[24px] leading-[24px] font-[700] text-[#374051]">
+          Analytics
+        </h1>
         <Link
           href={"/home/leaderboard"}
-          className="flex text-[#527dff] cursor-pointer text-xs font-[600] justify-center items-center"
+          className="flex text-[#527dff] cursor-pointer text-[15px] leading-[15px] font-[700] justify-center items-center"
         >
           Leaderboard
-          <Image src={ArrowIcon} alt="Arrow" />
+          <Image src={ArrowIcon} alt="Arrow" className="h-[9px] w-[9px]" />
         </Link>
       </div>
 

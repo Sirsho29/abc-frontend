@@ -18,10 +18,12 @@ const Welcome = () => {
         width={200}
       />
       <div>
-        <h1 className="text-lg font-[400]">Welcome Back,</h1>
-        <h1 className="font-[700] text-xl mt-[-5px]">Sugarplum</h1>
+        <h1 className="text-[21px] leading-[21px] font-[400]">Welcome Back,</h1>
+        <h1 className="text-[27px] leading-[27px] font-[800] text-[#374051] ">
+          Sugarplum
+        </h1>
       </div>
-      <p className="text-lg mb-[8px] flex gap-2 font-[400]">
+      <p className="text-[21px] leading-[21px] font-[400] mb-[8px] flex gap-2">
         Here is your progress report <Image src={InfoLogo} alt="Info" />
       </p>
 

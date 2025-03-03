@@ -19,7 +19,10 @@ export default function NameInput({
 
   return (
     <div className="w-full  ">
-      <Label htmlFor="name" className="text-gray-600">
+      <Label
+        htmlFor="name"
+        className="text-gray-600 text-[18px] leading-[18px] font-[600]"
+      >
         {label}
       </Label>
       <div className="relative mt-1">
@@ -35,7 +38,7 @@ export default function NameInput({
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder={placeholder}
-          className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-[21px] leading-[21px] font-[400]"
         />
       </div>
     </div>

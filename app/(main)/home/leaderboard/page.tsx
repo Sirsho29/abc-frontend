@@ -66,29 +66,43 @@ const Page = () => {
               key={quiz.id}
               className="p-2.5 px-4 text-[#374051] flex gap-1 rounded-xl shadow-sm border mb-2 justify-between flex-row font-[400]"
             >
-              <h1 className="text-sm font-[500] flex justify-center items-center gap-3">
-                <span className="text-[#527DFF] font-[600]">{index + 1}.</span>{" "}
+              <h1 className=" flex text-[21px] leading-[21px] font-[500] justify-center items-center gap-3">
+                <span className="text-[#527DFF]  ">{index + 1}.</span>{" "}
                 {quiz.name}
               </h1>
               <div className="flex gap-8">
                 <div className="text-sm flex justify-center items-center flex-col mr-2">
-                  <h1 className="text-[#6C7180] font-[500]">Score</h1>
-                  <p className="text-[#527DFF] font-[500]">{quiz.score}</p>
+                  <h1 className="text-[#6C7180] text-[18px] leading-[18px] font-[500] mb-1">
+                    Score
+                  </h1>
+                  <p className="text-[#527DFF] text-[18px] leading-[18px] font-[600]">
+                    {quiz.score}
+                  </p>
                 </div>
                 <Image src={Line} alt="Line" />
                 <div className="text-sm flex justify-center items-center flex-col">
-                  <h1 className="text-[#6C7180] font-[500]">Accuracy</h1>
-                  <p className="text-[#527DFF] font-[500]">{quiz.accuracy}</p>
+                  <h1 className="text-[#6c7180] text-[18px] leading-[18px] font-[500] mb-1">
+                    Accuracy
+                  </h1>
+                  <p className="text-[#527DFF] text-[18px] leading-[18px] font-[600]">
+                    {quiz.accuracy}
+                  </p>
                 </div>
                 <Image src={Line} alt="Line" />
                 <div className="text-sm flex justify-center items-center flex-col">
-                  <h1 className="text-[#6C7180] font-[500]">Avg. Score</h1>
-                  <p className="text-[#527DFF] font-[500]">{quiz.avgScore}</p>
+                  <h1 className="text-[#6C7180] text-[18px] leading-[18px] font-[500] mb-1">
+                    Avg. Score
+                  </h1>
+                  <p className="text-[#527DFF] text-[18px] leading-[18px] font-[600]">
+                    {quiz.avgScore}
+                  </p>
                 </div>
                 <Image src={Line} alt="Line" />
                 <div className="text-sm flex justify-center items-center flex-col mr-2">
-                  <h1 className="text-[#6C7180] font-[500]">Completion Rate</h1>
-                  <p className="text-[#527DFF] font-[500]">
+                  <h1 className="text-[#6C7180] text-[18px] leading-[18px] font-[500] mb-1">
+                    Completion Rate
+                  </h1>
+                  <p className="text-[#527DFF] text-[18px] leading-[18px] font-[600]">
                     {quiz.completionRate}
                   </p>
                 </div>
