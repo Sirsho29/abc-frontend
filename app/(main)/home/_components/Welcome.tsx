@@ -6,15 +6,15 @@ import EngagementIcon from "@/assets/svg/homePageIcons/Engagement.svg";
 import TopicIcon from "@/assets/svg/homePageIcons/TopicReviced.svg";
 import Image from "next/image";
 import InfoLogo from '@/assets/svg/info.svg';
-import Pattern from "@/assets/svg/homePageIcons/LowerPattern.svg";
+import Pattern from "@/assets/svg/homePageIcons/LowerPattern-cropped.svg";
 const Welcome = () => {
   return (
     <div className="relative p-4 text-[#374051] flex flex-col gap-1 rounded-xl shadow-sm border mb-5">
       <Image
-        className="absolute inset-0 h-[15rem] w-[15rem] left-[56.7rem]"
+        className="absolute inset-0 h-[8rem] w-[11rem] left-[60.5rem] rounded-tr-xl"
         src={Pattern}
         alt="Pattern"
-        height={200}
+        height={100}
         width={200}
       />
       <div>
@@ -42,7 +42,7 @@ const Welcome = () => {
           icon={QustionIcon}
           typed
         />
-        <ReportCard name="Engagement Time" icon={TopicIcon} number="13" />
+        <ReportCard name="Topics Revised" icon={TopicIcon} number="13" />
         <ReportCard
           name="Engagement Time"
           icon={EngagementIcon}

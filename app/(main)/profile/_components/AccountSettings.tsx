@@ -18,7 +18,7 @@ const AccountSettings = () => {
     >
       <div className="flex justify-between">
         <h1 className="text-[24px] leading-[24px] font-[500] flex justify-center items-center gap-3">
-          <span>
+          <span className="bg-[#eef2ff] p-2 rounded-full">
             <Image src={Avater} alt="Down" height={20} width={20} />
           </span>
           Account

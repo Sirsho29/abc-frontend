@@ -8,12 +8,14 @@ export default function NameInput({
   icon,
   placeholder,
   label,
-  type='text',
+  type = "text",
+  className,
 }: {
   icon: string;
   placeholder: string;
   label: string;
   type?: string;
+  className?: string;
 }) {
   const [name, setName] = useState("");
 
@@ -21,7 +23,7 @@ export default function NameInput({
     <div className="w-full  ">
       <Label
         htmlFor="name"
-        className="text-gray-600 text-[18px] leading-[18px] font-[600]"
+        className="text-[#6c7180] text-[18px] leading-[18px] font-[600]"
       >
         {label}
       </Label>
@@ -38,7 +40,7 @@ export default function NameInput({
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder={placeholder}
-          className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-[21px] leading-[21px] font-[400]"
+          className={` text-[#374051] pl-10 pr-3 py-2 w-full border-[#cbd5e1] rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none  text-[21px] leading-[21px] font-[400] ${className}`}
         />
       </div>
     </div>

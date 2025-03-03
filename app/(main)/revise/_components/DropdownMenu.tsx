@@ -43,7 +43,7 @@ const DropdownMenu = () => {
         >
           <div className="flex justify-between w-full">
             <Link
-              href={"/revice/simplification"}
+              href={"/revise/simplification"}
               className="text-[18px] leading-[18px] font-[400] flex justify-center items-center gap-2"
             >
               <span>1.1</span>Simplification
@@ -52,7 +52,7 @@ const DropdownMenu = () => {
           </div>
           <div className="flex justify-between w-full">
             <Link
-              href={"/revice/simplification"}
+              href={"/revise/simplification"}
               className="text-[18px] leading-[18px] font-[400] flex justify-center items-center gap-2"
             >
               <span>1.2</span>Simplification
@@ -61,7 +61,7 @@ const DropdownMenu = () => {
           </div>
           <div className="flex justify-between w-full">
             <Link
-              href={"/revice/simplification"}
+              href={"/revise/simplification"}
               className="text-[18px] leading-[18px] font-[400] flex justify-center items-center gap-2"
             >
               <span>1.3</span>Simplification

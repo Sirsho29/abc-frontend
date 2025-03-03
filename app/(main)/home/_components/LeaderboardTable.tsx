@@ -9,7 +9,7 @@ const rankings = [
   {
     place: "2nd",
     color: "text-gray-500 font-bold",
-    bg: "bg-gradient-to-t from-gray-300 to-white",
+    bg: "bg-gradient-to-t from-[#bbbbbb] to-white",
     name: "Name 2",
     course: "Course",
     image: Silver,
@@ -18,7 +18,7 @@ const rankings = [
   {
     place: "1st",
     color: "text-yellow-500 font-bold",
-    bg: "bg-gradient-to-t from-yellow-400 to-white",
+    bg: "bg-gradient-to-t from-[#fbc332] to-white",
     name: "Name 1",
     course: "Course",
     image: Gold,
@@ -28,7 +28,7 @@ const rankings = [
   {
     place: "3rd",
     color: "text-orange-500 font-bold",
-    bg: "bg-gradient-to-t from-orange-400 to-white",
+    bg: "bg-gradient-to-t from-[#d28b46] to-white",
     name: "Name 3",
     course: "Course",
     image: Bronze,

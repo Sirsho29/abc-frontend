@@ -15,7 +15,7 @@ const Security = () => {
     >
       <div className="flex justify-between">
         <h1 className="text-[24px] leading-[24px] font-[500] flex justify-center items-center gap-3">
-          <span>
+          <span className=" bg-[#fbf1df] p-2 rounded-full">
             <Image src={Sec} alt="Down" height={20} width={20} />
           </span>
           Security

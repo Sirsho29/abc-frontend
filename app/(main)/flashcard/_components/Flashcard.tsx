@@ -14,6 +14,7 @@ interface Flashcard {
   title: string;
   content: string;
   imageSrc: string;
+  short: string;
   flipContent: string;
   isCorrect: boolean;
 }
@@ -21,6 +22,7 @@ interface Flashcard {
 const flashcards: Flashcard[] = [
   {
     title: "Flashcard 1 of 5",
+    short: "1/5",
     content: "Solar System has 8 Planets and every planet has a moon",
     imageSrc: "SolarImage.jpg",
     flipContent: "Solar System has 8 Planets and every planet has a moon",
@@ -28,6 +30,7 @@ const flashcards: Flashcard[] = [
   },
   {
     title: "Flashcard 2 of 5",
+    short: "2/5",
     content: "The Earth is flat",
     imageSrc: "EarthImage.jpg",
     flipContent: "The Earth is an oblate spheroid",
@@ -35,6 +38,7 @@ const flashcards: Flashcard[] = [
   },
   {
     title: "Flashcard 3 of 5",
+    short: "3/5",
     content: "The Sun is the center of our Solar System",
     imageSrc: "SunImage.jpg",
     flipContent: "The Sun is the center of our Solar System",
@@ -42,6 +46,7 @@ const flashcards: Flashcard[] = [
   },
   {
     title: "Flashcard 4 of 5",
+    short: "4/5",
     content: "Mars has two moons",
     imageSrc: "MarsImage.jpg",
     flipContent: "Mars has two moons: Phobos and Deimos",
@@ -49,6 +54,7 @@ const flashcards: Flashcard[] = [
   },
   {
     title: "Flashcard 5 of 5",
+    short: "5/5",
     content: "Jupiter is the smallest planet",
     imageSrc: "JupiterImage.jpg",
     flipContent: "Jupiter is the largest planet in our Solar System",

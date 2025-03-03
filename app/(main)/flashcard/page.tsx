@@ -30,7 +30,7 @@ const page = () => {
         <div className="flex justify-center items-center">
           <Button className="text-center mt-8 w-fit" variant="blue">
             <Link
-              href={"/test/history"}
+              href={"/flashcard/cards"}
               className="flex justify-center items-center gap-2"
             >
               Proceed <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />

@@ -5,7 +5,7 @@ import SearchIcon from '@/assets/svg/reviceIcons/searchIcon.svg'
 
 const page = () => {
   return (
-    <MainHeader name="Revice">
+    <MainHeader name="Revise">
       <div>
         <div className=" mb-3 z-10">
           <h1 className="text-[#374051] font-[500] text-lg mb-2">Select Subject</h1>

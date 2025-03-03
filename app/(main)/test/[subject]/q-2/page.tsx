@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import SecondaryHeader from "@/app/_containers/SecondaryHeader";
 import Image from "next/image";
@@ -10,7 +10,7 @@ import SavedIcon from "@/assets/svg/testIcons/saved.svg";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/assets/svg/testIcons/sidebar.svg";
 import SArrowIcon from "@/assets/svg/testIcons/secarrow.svg";
-import BoxIcon from '@/assets/svg/testIcons/box.svg';
+import BoxIcon from "@/assets/svg/testIcons/box.svg";
 const questionData = {
   question: "Solar System has 8 Planets and every planet has a moon",
   options: [
@@ -29,6 +29,7 @@ const Page = () => {
   const [isAnswered, setIsAnswered] = useState(false);
 
   const handleSelect = (optionId: string, isCorrect: boolean) => {
+    if (isAnswered) return; // Prevent selection after answering
     setSelectedOption(optionId);
     setIsCorrect(isCorrect);
     setIsAnswered(true);
@@ -72,7 +73,9 @@ const Page = () => {
               return (
                 <div
                   key={option.id}
-                  className={`w-[35rem] relative h-[147px] flex gap-2 text-[18px] items-center font-[500] cursor-pointer rounded-lg justify-center shadow-sm border px-3 py-1.5  font-['DM Sans'] leading-[18px] ${bgColor} text-[#52525b]`}
+                  className={`w-[35rem] relative h-[147px] flex gap-2 text-[18px] items-center font-[500] cursor-pointer rounded-lg justify-center shadow-sm border px-3 py-1.5  font-['DM Sans'] leading-[18px] ${bgColor} text-[#52525b] ${
+                    isAnswered ? "pointer-events-none" : ""
+                  }`}
                   onClick={() => handleSelect(option.id, option.isCorrect)}
                 >
                   <Image
@@ -80,7 +83,7 @@ const Page = () => {
                     src={option.icon}
                     alt={option.id.toUpperCase()}
                   />
-                  <Image src={BoxIcon} alt="Box Icon"/>
+                  <Image src={BoxIcon} alt="Box Icon" />
                   {/* {option.text} */}
                 </div>
               );
@@ -91,7 +94,7 @@ const Page = () => {
         {/* Explanation Section (Only shows after answering) */}
         {isAnswered && (
           <div className="mt-5 border rounded-lg px-5 py-4 bg-[#f8f9fa] shadow-sm">
-            <h1 className="font-[500] text-[24px] leading-[24px] text-[#374051] mb-5">
+            <h1 className="font-[500] text-[24px] leading-[24px] text-[#374051] mb-3">
               Explanation
             </h1>
             <p className="text-[18px] leading-[21px] text-[#6C7180]">
@@ -104,10 +107,10 @@ const Page = () => {
         <div className="mt-20 flex justify-end gap-4">
           <Button variant="secondary">
             <Image src={SArrowIcon} alt="Arrow" className="h-3 w-3" />
-            Previous
+            PREVIOUS
           </Button>
           <Button variant="blue">
-            Proceed <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />
+            PROCEED <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />
           </Button>
         </div>
       </div>

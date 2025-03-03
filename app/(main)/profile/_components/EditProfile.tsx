@@ -33,8 +33,9 @@ const EditProfile = () => {
         <PhoneNumberInput />
         <NameInput
           icon={PasswordIcon}
-          placeholder="| marvin@email.com"
+          placeholder="| • • • • • •"
           label="Password"
+          className="tracking-wider"
         />
 
         <DatePickerDemo />

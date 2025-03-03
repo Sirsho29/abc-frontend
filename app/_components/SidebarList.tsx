@@ -44,10 +44,10 @@ const sidebarList: {
     text: "Flashcards",
   },
   {
-    route: "/revice",
+    route: "/revise",
     icon: ReviceCardIcon.src,
     aicon: AReviceCardIcon.src,
-    text: "Revice",
+    text: "Revise",
   },
   {
     route: "/profile",

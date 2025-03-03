@@ -1,7 +1,7 @@
 import MainHeader from "@/app/_containers/MainHeader";
 import React from "react";
-import CircularTag from "@/app/(main)/revise/_components/CircularTag";
-import DownIcon from '@/assets/svg/reviceIcons/down.svg'
+import CircularTag from "../../revise/_components/CircularTag";
+import DownIcon from "@/assets/svg/reviceIcons/down.svg";
 import Image from "next/image";
 const page = () => {
   return (

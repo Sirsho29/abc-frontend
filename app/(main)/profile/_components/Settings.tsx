@@ -7,6 +7,7 @@ import Avater from "@/assets/svg/profileIcons/setting.svg";
 import Edit from "@/assets/svg/profileIcons/edit.svg";
 import Bell from "@/assets/svg/profileIcons/bell.svg";
 import Arrow from "@/assets/svg/reviceIcons/blackArrow.svg";
+import ToggleButton from "./ToggleButton";
 const Settings = () => {
   const [drop, setDrop] = useState<boolean>(false);
   return (
@@ -16,7 +17,7 @@ const Settings = () => {
     >
       <div className="flex justify-between">
         <h1 className="text-[24px] leading-[24px] font-[500] flex justify-center items-center gap-3">
-          <span>
+          <span className="bg-[#edeef0] p-2 rounded-full">
             <Image src={Avater} alt="Down" height={20} width={20} />
           </span>
           Settings
@@ -56,7 +57,7 @@ const Settings = () => {
               </span>
               Push Notifications
             </h1>
-            <Image src={Arrow} alt="Down" height={5} width={5} />
+            <ToggleButton />
           </div>
         </div>
       )}

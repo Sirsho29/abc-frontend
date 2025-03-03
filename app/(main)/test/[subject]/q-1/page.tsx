@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import SecondaryHeader from "@/app/_containers/SecondaryHeader";
 import Image from "next/image";
@@ -19,8 +19,7 @@ const questionData = {
     { id: "c", text: "May be", icon: C, isCorrect: false },
     { id: "d", text: "Not Possible", icon: D, isCorrect: false },
   ],
-  explanation:
-    "Solar System has 8 Planets and every planet has a moon Solar System has 8 Planets and every planet has a moonSolar System has 8 Planets and every planet has a moonSolar System has 8 Planets and every planet has a moonSolar System has 8 Planets and every planet has a moon Solar System has 8 Planets and every planet has a moon Solar System has 8 Planets and every planet has a moonSolar ",
+  explanation: "Solar System has 8 Planets and every planet has a moon...",
 };
 
 const Page = () => {
@@ -29,9 +28,11 @@ const Page = () => {
   const [isAnswered, setIsAnswered] = useState(false);
 
   const handleSelect = (optionId: string, isCorrect: boolean) => {
-    setSelectedOption(optionId);
-    setIsCorrect(isCorrect);
-    setIsAnswered(true);
+    if (!isAnswered) {
+      setSelectedOption(optionId);
+      setIsCorrect(isCorrect);
+      setIsAnswered(true);
+    }
   };
 
   return (
@@ -49,7 +50,7 @@ const Page = () => {
               className="h-5 w-5 cursor-pointer"
             />
           </div>
-          <div className="w-full text-[21px] leading-[25.2px] font-[400] rounded-lg shadow-sm border px-3 py-2 bg-[#f0f8ff] ">
+          <div className="w-full text-[21px] leading-[25.2px] font-[400] rounded-lg shadow-sm border px-3 py-2 bg-[#f0f8ff]">
             {questionData.question}
           </div>
         </div>
@@ -72,7 +73,9 @@ const Page = () => {
               return (
                 <div
                   key={option.id}
-                  className={`w-full flex gap-2 text-[18px] items-center font-[500] cursor-pointer rounded-lg shadow-sm border px-3 py-1.5  font-['DM Sans'] leading-[18px] ${bgColor} text-[#52525b]`}
+                  className={`w-full flex gap-2 text-[18px] items-center font-[500] cursor-pointer rounded-lg shadow-sm border px-3 py-1.5 font-['DM Sans'] leading-[18px] ${bgColor} text-[#52525b] ${
+                    isAnswered ? "pointer-events-none " : ""
+                  }`}
                   onClick={() => handleSelect(option.id, option.isCorrect)}
                 >
                   <Image
@@ -88,19 +91,27 @@ const Page = () => {
         </div>
 
         {/* Explanation Section (Only shows after answering) */}
+        {isAnswered && (
+          <div className="mt-5 border rounded-lg px-5 py-4 bg-[#f8f9fa] shadow-sm">
+            <h1 className="font-[500] text-[24px] leading-[24px] text-[#374051] mb-3">
+              Explanation
+            </h1>
+            <p className="text-[18px] leading-[21px] text-[#6C7180]">
+              {questionData.explanation}
+            </p>
+          </div>
+        )}
 
         {/* Navigation Buttons */}
         <div className="mt-20 flex justify-end gap-4">
           <Button variant="secondary">
             <Image src={SArrowIcon} alt="Arrow" className="h-3 w-3" />
-            Previous
+            PREVIOUS
           </Button>
           <Button variant="blue">
-            Proceed <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />
+            PROCEED <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />
           </Button>
         </div>
-
-        
       </div>
     </SecondaryHeader>
   );

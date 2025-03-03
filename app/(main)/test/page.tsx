@@ -14,7 +14,7 @@ const page = () => {
             Select Subject
           </h1>
           <input
-            className={`w-full rounded-3xl border py-2 px-5 text-sm focus:ring-0`}
+            className={`w-full z-[1000] relative rounded-3xl border py-2 px-5 text-sm focus:ring-0`}
             placeholder={`Search`}
           />
         </div>
@@ -31,7 +31,7 @@ const page = () => {
               href={"/test/history"}
               className="flex justify-center items-center gap-2"
             >
-              Proceed <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />
+              PROCEED <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />
             </Link>
           </Button>
         </div>

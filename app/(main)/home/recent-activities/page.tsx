@@ -8,7 +8,7 @@ const activitiesData = [
     date: "Monday 13 September 2024",
     activities: [
       { id: 1, title: "Quiz", status: "Completed", statusColor: "#527DFF" },
-      { id: 2, title: "Test", status: "Incompleted", statusColor: "#FF3957" },
+      { id: 2, title: "Test", status: "Incomplete", statusColor: "#FF3957" },
       {
         id: 3,
         title: "Visited Question Bank",
@@ -21,7 +21,7 @@ const activitiesData = [
     date: "Monday 13 September 2024",
     activities: [
       { id: 1, title: "Quiz", status: "Completed", statusColor: "#527DFF" },
-      { id: 2, title: "Test", status: "Incompleted", statusColor: "#FF3957" },
+      { id: 2, title: "Test", status: "Incomplete", statusColor: "#FF3957" },
       {
         id: 3,
         title: "Visited Question Bank",
@@ -34,7 +34,7 @@ const activitiesData = [
     date: "Monday 13 September 2024",
     activities: [
       { id: 1, title: "Quiz", status: "Completed", statusColor: "#527DFF" },
-      { id: 2, title: "Test", status: "Incompleted", statusColor: "#FF3957" },
+      { id: 2, title: "Test", status: "Incomplete", statusColor: "#FF3957" },
       {
         id: 3,
         title: "Visited Question Bank",

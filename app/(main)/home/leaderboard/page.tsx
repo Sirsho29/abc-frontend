@@ -7,7 +7,7 @@ import LeaderboardTable from "../_components/LeaderboardTable";
 const quizData = [
   {
     id: 1,
-    name: "Quiz",
+    name: "Name 1",
     score: 98,
     accuracy: "98%",
     avgScore: 98,
@@ -15,7 +15,7 @@ const quizData = [
   },
   {
     id: 2,
-    name: "Quiz",
+    name: "Name 2",
     score: 85,
     accuracy: "85%",
     avgScore: 90,
@@ -23,7 +23,7 @@ const quizData = [
   },
   {
     id: 3,
-    name: "Quiz",
+    name: "Name 3",
     score: 75,
     accuracy: "80%",
     avgScore: 78,
@@ -31,7 +31,7 @@ const quizData = [
   },
   {
     id: 4,
-    name: "Quiz",
+    name: "Name 4",
     score: 92,
     accuracy: "90%",
     avgScore: 91,
@@ -39,7 +39,7 @@ const quizData = [
   },
   {
     id: 5,
-    name: "Quiz",
+    name: "Name 5",
     score: 88,
     accuracy: "87%",
     avgScore: 89,
@@ -47,7 +47,7 @@ const quizData = [
   },
   {
     id: 6,
-    name: "Quiz",
+    name: "Name 6",
     score: 95,
     accuracy: "96%",
     avgScore: 94,
@@ -72,7 +72,7 @@ const Page = () => {
               </h1>
               <div className="flex gap-8">
                 <div className="text-sm flex justify-center items-center flex-col mr-2">
-                  <h1 className="text-[#6C7180] text-[18px] leading-[18px] font-[500] mb-1">
+                  <h1 className="text-[#6C7180] text-[18px] leading-[18px] font-[800] mb-1">
                     Score
                   </h1>
                   <p className="text-[#527DFF] text-[18px] leading-[18px] font-[600]">
