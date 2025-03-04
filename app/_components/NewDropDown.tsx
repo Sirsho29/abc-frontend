@@ -20,7 +20,7 @@ const isCFASelected = ["CFA L-1", "CFA L-2", "CFA L-3"].includes(selected);
         <div className="absolute mt-2 left-[-35]  w-40 bg-white border shadow-lg rounded-lg">
           <div className="px-4 py-2 font-[600] mt-2 text-[#374051] text-[21px] leading-[21px] cursor-default flex flex-row relative">
             {isCFASelected && (
-              <div className="min-h-[22px] min-w-[3.5px] absolute bg-blue-500 rounded-r-full  right-[157px]"></div>
+              <div className="min-h-[22px] min-w-[3.5px] absolute bg-blue-500 rounded-r-full  right-[156px]"></div>
               // left-[-1]
             )}
             CFA
