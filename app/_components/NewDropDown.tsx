@@ -70,7 +70,7 @@ const isCFASelected = ["CFA L-1", "CFA L-2", "CFA L-3"].includes(selected);
             }}
           >
             {selected === "FRM" && (
-              <div className="min-h-[22px] min-w-[3.5px] absolute bg-blue-500 rounded-r-full left-[-1]"></div>
+              <div className="min-h-[22px] min-w-[3.5px] absolute bg-blue-500 rounded-r-full right-[156px]"></div>
             )}
             FRM
           </div>
@@ -84,7 +84,7 @@ const isCFASelected = ["CFA L-1", "CFA L-2", "CFA L-3"].includes(selected);
             }}
           >
             {selected === "Training" && (
-              <div className="min-h-[22px] min-w-[3.5px] absolute bg-blue-500 rounded-r-full left-[-1]"></div>
+              <div className="min-h-[22px] min-w-[3.5px] absolute bg-blue-500 rounded-r-full right-[156px]"></div>
             )}
             Training
           </div>
