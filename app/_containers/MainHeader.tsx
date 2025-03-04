@@ -3,17 +3,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Pattern from "@/assets/svg/homePageIcons/UpperPatter.svg";
 import NotificationIcon from "@/assets/svg/sidebarIcons/notification.svg";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import DropDown from "../_components/DropDown";
+import Marked from '@/assets/svg/sidebarIcons/marked.svg';
 import { Bell, X } from "lucide-react";
 import RightIcon from "@/assets/svg/homePageIcons/rightIcon.svg";
 import Notificetion from "@/assets/svg/homePageIcons/notificetion.svg";
+import NewDropdown from "../_components/NewDropDown";
 
 interface Notification {
   id: number;
@@ -35,6 +29,17 @@ const initialNotifications: Notification[] = [
     linkText: "Resume from here",
     link: "#",
     read: false,
+    time: "23 min",
+  },
+  {
+    id: 2,
+    type: "reminder",
+    title: "Result available",
+    message:
+      "Your CFA L-1 results are now available. View your score and detailed feedback",
+    linkText: "Open from here",
+    link: "#",
+    read: true,
     time: "23 min",
   },
 ];
@@ -73,7 +78,7 @@ const MainHeader = ({
         <h1 className="font-[600] ml-[16px] text-[36px] text-[#374051]">
           {name}
         </h1>
-        <div className="flex gap-7">
+        <div className="flex gap-7 justify-center items-center">
           <Image
             className="h-[30px] w-[30px] cursor-pointer"
             onClick={() => setToggle(!toggle)}
@@ -82,11 +87,13 @@ const MainHeader = ({
             height={20}
             width={20}
           />
-          {isDropable && <DropDown />}
+          {isDropable && <NewDropdown />}
 
           {toggle && (
             <div
-              className={`absolute bg-white z-[200] top-[8%] right-[14%] h-[500px] 
+              className={`absolute bg-white ${
+                isDropable ? "top-[8%] right-[14%]" : "top-[12%] right-[3%]"
+              } z-[200]  h-[500px] 
           w-[550px] shadow-lg rounded-lg p-6 border  ${
             toggle ? "block" : "hidden"
           }`}
@@ -94,18 +101,23 @@ const MainHeader = ({
               <h1 className="text-[24px] leading-[24px] font-[500]">
                 Notifications
               </h1>
-              <div className="mt-4 space-y-2 ">
+              <div className="mt-6 space-y-2">
                 {notifications.map((notification) => (
                   <div
                     key={notification.id}
-                    className={`p-4 rounded-lg flex flex-col justify-between items-start ${
+                    className={`p-4 rounded-lg flex flex-col justify-between items-start mb-3 ${
                       notification.read
                         ? "bg-gray-100"
                         : "bg-white border-l-4 border-red-500"
                     }`}
                   >
                     <div className="flex justify-start items-start gap-3">
-                      <Image src={Notificetion} alt="Noti" />
+                      {!notification.read ? (
+                        <Image src={Notificetion} alt="Noti" />
+                      ) : (
+                        <Image src={Marked} alt="Noti" />
+                      )}
+
                       <div>
                         <div className="">
                           <div className="text-[21px] w-[27rem] justify-between flex items-center leading-[21px] gap-[15rem] font-[700] text-[#374051]">
@@ -123,11 +135,11 @@ const MainHeader = ({
                             {notification.message}
                           </div>
                         </div>
-                        <div className="flex items-center justify-between gap-20 w-[27rem] space-x-2 mt-2">
+                        <div className={`flex ${notification.read ? 'hidden':""} items-center justify-between gap-20 w-[27rem] space-x-2 mt-2`}>
                           {notification.linkText && (
                             <a
                               href={notification.link}
-                              className="text-[16px] leading-[18px] font-[500] text-blue-500"
+                              className="text-[18px] leading-[18px] font-[700] text-blue-500"
                             >
                               {notification.linkText}
                             </a>

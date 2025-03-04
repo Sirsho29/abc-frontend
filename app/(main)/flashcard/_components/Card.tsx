@@ -12,6 +12,7 @@ interface FlashcardProps {
   imageSrc: string;
   isCorrect: boolean;
   flipContent: string;
+  onAnswer: (explanation: string) => void;
 }
 
 const Card: React.FC<FlashcardProps> = ({
@@ -20,6 +21,7 @@ const Card: React.FC<FlashcardProps> = ({
   imageSrc,
   isCorrect,
   flipContent,
+  onAnswer
 }) => {
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-150, 150], [-10, 10]);
@@ -39,9 +41,11 @@ const Card: React.FC<FlashcardProps> = ({
     if (dragEnded) return;
 
     if (info.offset.x > 100) {
+      onAnswer(flipContent);
       setFeedback(isCorrect ? "Correct" : "Incorrect");
       animate(x, 150, { type: "spring", stiffness: 100 });
     } else if (info.offset.x < -100) {
+      onAnswer(flipContent);
       setFeedback(!isCorrect ? "Correct" : "Incorrect");
       animate(x, -150, { type: "spring", stiffness: 100 });
     } else {
@@ -101,7 +105,7 @@ const Card: React.FC<FlashcardProps> = ({
 
           {/* Back Side */}
           <div
-            className="absolute w-full h-full flex flex-col justify-center items-center p-5 bg-white rounded-xl shadow-xl"
+            className="absolute w-full h-full flex flex-col justify-center items-center p-5 bg-[#f0f8ff] rounded-xl shadow-xl"
             style={{
               backfaceVisibility: "hidden",
               transform: "rotateY(180deg)",
@@ -127,8 +131,6 @@ const Card: React.FC<FlashcardProps> = ({
           />
         </motion.div>
       )}
-
-      
     </div>
   );
 };

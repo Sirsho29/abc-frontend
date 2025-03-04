@@ -32,6 +32,30 @@ const page = () => {
         </div>
         <Selector />
         <Customization />
+        <div className="mt-5 border rounded-lg px-5 py-4 bg-[#f8f9fa] shadow-sm">
+          <h1 className="font-[600] text-[21px] leading-[21px] text-[#374051] mb-3">
+            Instructions
+          </h1>
+          <ul className="text-[18px] leading-[21px] text-[#6C7180]">
+            <li className="flex gap-3 text-[18px] leading-[21px] font-[400] text-[#4B5462]">
+              <span>•</span>Do NOT close the app during the test, in case you do
+              your test will be automatically automatically submitted.
+            </li>
+            <li className="flex gap-3 text-[18px] leading-[21px] font-[400] text-[#4B5462]">
+              <span>•</span>
+              The test gets submitted automatically automatically if the time
+              ends.
+            </li>
+            <li className="flex gap-3 text-[18px] leading-[21px] font-[400] text-[#4B5462]">
+              <span>•</span>
+              Do NOT press the back button during the test, in case you do your
+              test will be automatically automatically submitted.
+            </li>
+            <li className="flex gap-3 text-[18px] leading-[21px] font-[400] text-[#4B5462]">
+              <span>•</span>There is NO option to pause the test.
+            </li>
+          </ul>
+        </div>
         <div className="flex justify-center items-center">
           <Button className="text-center mt-8 w-fit" variant="blue">
             <Link

@@ -10,7 +10,7 @@ import SavedIcon from "@/assets/svg/testIcons/saved.svg";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/assets/svg/testIcons/sidebar.svg";
 import SArrowIcon from "@/assets/svg/testIcons/secarrow.svg";
-
+import HeaderCard from "@/app/_containers/HeaderCards";
 const questionData = {
   question: "Solar System has 8 Planets and every planet has a moon",
   options: [
@@ -36,7 +36,7 @@ const Page = () => {
   };
 
   return (
-    <SecondaryHeader name="Test" returnurl="/test">
+    <HeaderCard name="Test" returnurl="/test">
       <div className="flex flex-col">
         {/* Question Section */}
         <div className="flex flex-col gap-3 mb-8">
@@ -113,7 +113,7 @@ const Page = () => {
           </Button>
         </div>
       </div>
-    </SecondaryHeader>
+    </HeaderCard>
   );
 };
 

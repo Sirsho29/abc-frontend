@@ -1,14 +1,16 @@
-"use client";
+'use client'
 import React, { useState } from "react";
 import Image from "next/image";
 import Pattern from "@/assets/svg/homePageIcons/UpperPatter.svg";
 import NotificationIcon from "@/assets/svg/sidebarIcons/notification.svg";
 import Link from "next/link";
-import { Bell, X } from "lucide-react";
+import ClockIcon from '@/assets/svg/sidebarIcons/clock.svg'
 import ReturnIcon from "@/assets/svg/leaderboardIcon/return.svg";
+import QuestionButton from "../_components/QuestionButton";
 import RightIcon from "@/assets/svg/homePageIcons/rightIcon.svg";
 import Notificetion from "@/assets/svg/homePageIcons/notificetion.svg";
 import Marked from "@/assets/svg/sidebarIcons/marked.svg";
+import { Bell, X } from "lucide-react";
 
 interface Notification {
   id: number;
@@ -44,7 +46,7 @@ const initialNotifications: Notification[] = [
     time: "23 min",
   },
 ];
-const SecondaryHeader = ({
+const HeaderCard = ({
   children,
   name,
   returnurl = "/",
@@ -53,22 +55,23 @@ const SecondaryHeader = ({
   name: string;
   returnurl?: string;
 }) => {
-  const [notifications, setNotifications] = useState(initialNotifications);
-  const [toggle, setToggle] = useState(false);
 
-  const markAsRead = (id: number) => {
-    setNotifications((prev: any[]) =>
-      prev.map((n) => (n.id === id ? { ...n, read: true } : n))
-    );
-  };
-
-  const removeNotification = (id: number) => {
-    setNotifications((prev: any[]) => prev.filter((n) => n.id !== id));
-  };
+    const [notifications, setNotifications] = useState(initialNotifications);
+    const [toggle, setToggle] = useState(false);
+  
+    const markAsRead = (id: number) => {
+      setNotifications((prev) =>
+        prev.map((n) => (n.id === id ? { ...n, read: true } : n))
+      );
+    };
+  
+    const removeNotification = (id: number) => {
+      setNotifications((prev) => prev.filter((n) => n.id !== id));
+    };
   return (
     <div className="overflow-hidden py-7 px-10 relative">
       <Image
-        className="absolute  top-[-57px] left-[-97px]  h-[20rem] w-[20rem] "
+        className="absolute  top-[-57px] left-[-97px]  h-[20rem] w-[20rem]"
         src={Pattern}
         alt="Pattern"
         height={200}
@@ -85,7 +88,15 @@ const SecondaryHeader = ({
             {name}
           </h1>
         </div>
-        <div className="flex gap-7">
+        <QuestionButton />
+        <div className="flex justify-center items-center  gap-7">
+          <div className="bg-[#ff3957] flex gap-2 px-3 py-1.5 justify-center items-center rounded-[6px]">
+            <Image src={ClockIcon} alt="" height={18} width={18} />
+            <p className="text-[21px] leading-[21px] font-[400] text-white">
+              00:00
+            </p>
+          </div>
+
           <Image
             className="h-[30px] w-[30px] cursor-pointer"
             onClick={() => setToggle(!toggle)}
@@ -96,7 +107,8 @@ const SecondaryHeader = ({
           />
           {toggle && (
             <div
-              className={`absolute bg-white top-[9%] right-[3%] z-[200]  h-[500px] 
+              className={`absolute bg-white top-[3%] right-[3%]
+              z-[200]  h-[500px] 
           w-[550px] shadow-lg rounded-lg p-6 border  ${
             toggle ? "block" : "hidden"
           }`}
@@ -177,7 +189,6 @@ const SecondaryHeader = ({
               </div>
             </div>
           )}
-
           {/* <DropDown data={["One","Two"]} label="Select" handleSelect={()=>{}} selected="" /> */}
         </div>
       </div>
@@ -187,4 +198,4 @@ const SecondaryHeader = ({
   );
 };
 
-export default SecondaryHeader;
+export default HeaderCard;

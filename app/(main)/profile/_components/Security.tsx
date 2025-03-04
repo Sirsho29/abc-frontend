@@ -50,7 +50,10 @@ const Security = () => {
             className=" px-3 py-2  flex justify-between items-center  border rounded-lg gap-2"
           >
             <div className="flex items-center gap-2 text-[18px] leading-[18px] font-[500]">
-              <Image src={Device} alt="Down" height={15} width={15} /> I Phone 6
+              <span className=" bg-[#f0f8ff] p-2 rounded-full">
+                <Image src={Device} alt="Down" height={15} width={15} />
+              </span>
+              I Phone 6
             </div>
             <Image src={Signout} alt="Sign Out" />
           </div>
@@ -59,7 +62,10 @@ const Security = () => {
             className=" px-3 py-2  flex justify-between items-center  border rounded-lg gap-2"
           >
             <div className="flex items-center gap-2 text-[18px] leading-[18px] font-[500]">
-              <Image src={Device} alt="Down" height={15} width={15} /> I Phone 6
+              <span className=" bg-[#f0f8ff] p-2 rounded-full">
+                <Image src={Device} alt="Down" height={15} width={15} />
+              </span>{" "}
+              I Phone 6
             </div>
             <Image src={Signout} alt="Sign Out" />
           </div>

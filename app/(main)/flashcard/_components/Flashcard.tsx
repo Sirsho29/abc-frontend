@@ -10,6 +10,8 @@ import SaveIcon from "@/assets/svg/flashcardIcons/saved.svg";
 import CorrectIcon from "@/assets/svg/flashcardIcons/correct.svg";
 import InCorrectIcon from "@/assets/svg/flashcardIcons/incorrect.svg";
 import Image from "next/image";
+import UpArrow from "@/assets/svg/reviceIcons/up.svg";
+import DownArrow from "@/assets/svg/reviceIcons/down.svg";
 interface Flashcard {
   title: string;
   content: string;
@@ -66,7 +68,8 @@ export default function FlashcardComponent() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false); // Track if the question is answered
-
+  const [explanation, setExplanation] = useState("");
+  const [toggle, setToggle] = useState(false);
   // Go to the next question with looping
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % flashcards.length);
@@ -102,6 +105,10 @@ export default function FlashcardComponent() {
           imageSrc={SolarImage}
           flipContent={flashcards[currentIndex].flipContent}
           isCorrect={flashcards[currentIndex].isCorrect}
+          onAnswer={(explanation) => {
+            setIsAnswered(true);
+            setExplanation(explanation);
+          }}
         />
         <div className="flex justify-center items-center flex-col gap-2">
           <Image src={CorrectIcon} alt="correct" />
@@ -133,6 +140,56 @@ export default function FlashcardComponent() {
           <Image src={NextArrow} alt="" />
         </Button>
       </div>
+      {isAnswered && (
+        <div className="mt-8 border rounded-lg px-5 py-4 bg-[#f8f9fa] shadow-sm w-full">
+          <div
+            onClick={() => {
+              setToggle(!toggle);
+            }}
+            className="flex justify-between w-full cursor-pointer"
+          >
+            <h1
+              className={`font-[500] text-[24px] leading-[24px] text-[#374051] ${
+                toggle ? "mb-5" : ""
+              } `}
+            >
+              Explanation
+            </h1>
+            {toggle ? (
+              <Image
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+                src={UpArrow}
+                alt=""
+                className="cursor-pointer"
+              />
+            ) : (
+              <Image
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+                src={DownArrow}
+                alt=""
+                className="cursor-pointer"
+              />
+            )}
+          </div>
+
+          <p
+            className={`text-[18px] ${
+              toggle ? "" : "hidden"
+            }  leading-[21px] text-[#6C7180] font-[400]`}
+          >
+            Solar System has 8 Planets and every planet has a moon Solar System
+            has 8 Planets and every planet has a moonSolar System has 8 Planets
+            and every planet has a moonSolar System has 8 Planets and every
+            planet has a moonSolar System has 8 Planets and every planet has a
+            moon Solar System has 8 Planets and every planet has a moon Solar
+            System has 8 Planets and every planet has a moonSolar
+          </p>
+        </div>
+      )}
     </div>
   );
 }
