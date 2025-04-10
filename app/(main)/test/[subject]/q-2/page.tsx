@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/assets/svg/testIcons/sidebar.svg";
 import SArrowIcon from "@/assets/svg/testIcons/secarrow.svg";
 import BoxIcon from "@/assets/svg/testIcons/box.svg";
+import Link from "next/link";
 const questionData = {
   question: "Solar System has 8 Planets and every planet has a moon",
   options: [
@@ -106,11 +107,15 @@ const Page = () => {
         {/* Navigation Buttons */}
         <div className="mt-20 flex justify-end gap-4">
           <Button variant="secondary">
-            <Image src={SArrowIcon} alt="Arrow" className="h-3 w-3" />
-            PREVIOUS
+            <Link href={"/test/history/q-1"} className="flex justify-center items-center gap-2 mt-0.5">
+              <Image src={SArrowIcon} alt="Arrow" className="h-3 w-3" />
+              PREVIOUS
+            </Link>
           </Button>
-          <Button variant="blue">
-            PROCEED <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />
+          <Button disabled variant="blue">
+            <Link  href={"/test/history/q-2"} className="flex justify-center items-center gap-2 mt-0.5">
+              PROCEED <Image src={ArrowIcon} alt="Arrow" className="h-3 w-3" />
+            </Link>
           </Button>
         </div>
       </div>

@@ -122,7 +122,7 @@ const Card: React.FC<FlashcardProps> = ({
       {feedback && (
         <motion.div
           className={`absolute ${
-            feedback === "Correct" ? "left-[-100px]" : "left-[600px]"
+            feedback === "Correct" ?  "left-[600px]" : "left-[-100px]" 
           }  top-10 p-4 text-[20px] font-[700] flex items-center gap-3 text-black`}
         >
           <Image
